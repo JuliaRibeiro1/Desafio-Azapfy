@@ -1,13 +1,33 @@
+body, button, input {
+  font-family: 'Karma', serif;
+  color: white;
+}
+button, input {
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.432);
+}
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .box-shadow {
-  box-shadow: 0px 0px 10px 50px rgba(0, 0, 0, 0.363);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.432);
 }
 
-.text-shadow {
-  
+.textShadow {
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.712);
+}
+
+.goldText {
+  color: #AA8B24;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.goldBorder {
+  border: 3px solid #AA8B24;
 }

@@ -1,0 +1,28 @@
+.button {
+    background: none;
+    padding: .5em;
+    width: 25%;
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 1.2rem;
+    
+}
+
+.button:hover {
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.199), #ad8f22);
+    background-size: 150% 150%;
+    color: #533811;
+    animation: buttonAnimation 3s infinite;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+}

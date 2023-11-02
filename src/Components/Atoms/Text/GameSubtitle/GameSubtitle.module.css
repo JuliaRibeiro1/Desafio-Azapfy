@@ -1,0 +1,9 @@
+.subtitle {
+    letter-spacing: 10px;
+    font-weight: 500;
+    font-size: 2.3rem;
+    color: #AA8B24;;
+    background: -webkit-linear-gradient(#eeeeee,#AA8B24, #685413);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

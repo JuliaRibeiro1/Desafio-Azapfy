@@ -1,10 +1,9 @@
 import React from 'react'
-import styles from "./GameName.module.css"
-
+import styles from "./GameTitle.module.css"
 
 function GameTitle() {
   return (
-    <h1 className={styles.title}>SUPERHERO CLASH</h1>
+    <h1 className={`${styles.title} textShadow goldText`}>SUPERHERO CLASH</h1>
   )
 }
 
