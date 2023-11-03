@@ -1,3 +1,9 @@
+.inputContainer {
+    width: 100%;
+    text-align: center;
+   
+}
+
 .input {
     background-color: #2623513f;
     padding: .5em;

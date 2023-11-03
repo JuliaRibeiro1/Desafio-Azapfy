@@ -1,6 +1,7 @@
 body, button, input {
   font-family: 'Karma', serif;
   color: white;
+  
 }
 button, input {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.432);
