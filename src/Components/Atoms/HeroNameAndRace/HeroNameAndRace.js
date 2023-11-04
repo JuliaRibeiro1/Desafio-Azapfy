@@ -6,7 +6,7 @@ import HeroRace from '../Text/HeroRace/HeroRace'
 
 function HeroNameAndrace({name,description}) {
   return (
-    <div className={styles.heroNameAndRace}>
+    <div className={`${styles.heroNameAndRace} textShadow`}>
         <HeroName>
             {name}
         </HeroName>

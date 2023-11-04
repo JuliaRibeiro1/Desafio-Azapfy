@@ -8,14 +8,13 @@ import { useNavigate } from "react-router-dom";
 
 function Form() {
   
-  const name = useForm()
-
-
+  const {value,onChange,onBlur,error,validate} = useForm()
+  
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
-    if(name.validate()) {
+    if(validate()) {
       navigate("/game")
     }
   }
@@ -23,10 +22,10 @@ function Form() {
   return (
     <form className={`${styles.form} center`} onSubmit={e => handleSubmit(e)}>
         <InputName 
-            value={name.value} 
-            onChange={name.onChange}
-            onBlur={name.onBlur}
-            error={name.error}
+            value={value} 
+            onChange={onChange}
+            onBlur={onBlur}
+            error={error}
         />
         <ButtonStartGame/>
     </form>

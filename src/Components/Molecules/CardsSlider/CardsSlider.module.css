@@ -1,0 +1,13 @@
+.cardsSlider {
+    text-align: center;
+}
+.cardsSlider button {
+    box-shadow: none;
+}
+.cardsSlider img {
+    width: 70px;
+}
+
+.rightArrow {
+    transform: rotate(180deg);
+}

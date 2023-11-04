@@ -1,0 +1,11 @@
+.searchBar input {
+    width: 100%;
+    padding: .5em;
+    background: url(../../../Assets/icon-search.png) no-repeat 95%;
+    background-size: 20px;
+    position: relative;
+    text-align: start;
+    margin-left: -1em;
+ 
+}
+

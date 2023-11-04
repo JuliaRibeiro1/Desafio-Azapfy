@@ -1,5 +1,10 @@
 .heroNameAndRace {
-    background-color: red;
+    background: linear-gradient(to top, rgb(0, 14, 20) -8.27%, rgb(2, 30, 41) 10%, rgba(28, 137, 180, 0.26) 60.39%, rgba(48, 157, 200, 0.13) 78.6%, rgba(233, 240, 242, 0.00) 98%); 
     width: 100%;
+    position: relative;
+    top:-30%;
+    height: 30%;
+    padding: 1em 0;
+    text-align: center;
    
 }
