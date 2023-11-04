@@ -3,8 +3,6 @@ import styles from "./Card.module.css"
 import HeroNameAndRace from '../../Atoms/HeroNameAndRace/HeroNameAndRace'
 
 function Card({name,appearance,images}) {
-    console.log(name)
-    console.log(appearance)
 
   return (
     <div className={`${styles.card} boxShadow`}>

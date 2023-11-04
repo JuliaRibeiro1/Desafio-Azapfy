@@ -13,7 +13,7 @@ function CardsPageHeader() {
         </ButtonHeader>
       </div>
       <div className='headerLeft'>
-        <SearchBar/>
+        <SearchBar/> 
         <ButtonHeader>
             <img src={audioIcon} alt='audio'/>
         </ButtonHeader>
@@ -21,5 +21,5 @@ function CardsPageHeader() {
     </header>
   )
 }
-
+//Onchange
 export default CardsPageHeader

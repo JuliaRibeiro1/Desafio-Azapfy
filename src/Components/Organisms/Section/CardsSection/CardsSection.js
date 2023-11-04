@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useFetch from '../../../../Hooks/useFetch'
 import Card from "./../../../Molecules/Card/Card"
 import styles from "./CardsSection.module.css"
+import {UserContext} from '../../../../useContext'
 
 function CardsSection() {
-    const {data,error,loading} = useFetch()
-  
 
+    const {cardsInOnePage,data,loading,error} = useContext(UserContext)
+   console.log(data)
     if(loading) {
         return (
             <div>oii</div>
@@ -22,10 +23,11 @@ function CardsSection() {
     return (
     <div className={`${styles.cardsSection} `}>
        { data.map(player => {
-            console.log("OIII")
-            if(player.id <= 23) {
+
+            if(player.id <= cardsInOnePage) {
                 return (<Card key={player.id} {...player}/>)
             }
+
             return null
         })
     }
