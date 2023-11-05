@@ -1,5 +1,7 @@
 .cardsSlider {
     text-align: center;
+    flex-direction: row;
+    font-size: 1.3rem;
 }
 .cardsSlider button {
     box-shadow: none;

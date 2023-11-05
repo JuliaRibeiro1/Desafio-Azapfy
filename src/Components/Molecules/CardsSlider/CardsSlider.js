@@ -4,18 +4,18 @@ import styles from "./CardsSlider.module.css"
 import { UserContext } from '../../../useContext'
 
 function CardsSlider() {
-    const {currentCards,setCurrentCards} = React.useContext(UserContext)
-
-    function nextCards() {
-        console.log("OIII")
-        setCurrentCards(prev => prev + 1)
+    const {currentPage,setCurrentPage,data,nextPage,previousPage} = React.useContext(UserContext)
+    let totalPages = 0
+    if(data) {
+        totalPages = Math.ceil(data.length / 18)
     }
 
+
   return (
-    <div className={styles.cardsSlider}> 
-        <button className={styles.rightArrow}><img src={arrow} alt='voltar'/></button>
-            <span>{currentCards} de </span>
-        <button onClick={nextCards}><img src={arrow} alt='proximo'/></button>
+    <div className={`${styles.cardsSlider} center`}> 
+        {currentPage > 1 && <button onClick={previousPage} className={styles.rightArrow}><img src={arrow} alt='voltar'/></button>}
+            <span>{currentPage} de {totalPages}</span>
+        {currentPage < totalPages && <button onClick={nextPage}><img src={arrow} alt='proximo'/></button>}
     </div>
   )
 }

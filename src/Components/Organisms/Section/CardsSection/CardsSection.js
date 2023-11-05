@@ -6,8 +6,9 @@ import {UserContext} from '../../../../useContext'
 
 function CardsSection() {
 
-    const {cardsInOnePage,data,loading,error} = useContext(UserContext)
-   console.log(data)
+    const {cardsInOnePage,data,loading,error,currentPageCards} = useContext(UserContext)
+    console.log(data)
+    console.log(currentPageCards)
     if(loading) {
         return (
             <div>oii</div>
@@ -22,13 +23,8 @@ function CardsSection() {
     else {
     return (
     <div className={`${styles.cardsSection} `}>
-       { data.map(player => {
-
-            if(player.id <= cardsInOnePage) {
-                return (<Card key={player.id} {...player}/>)
-            }
-
-            return null
+       { currentPageCards.map(player => {
+            return (<Card key={player.id} {...player}/>)
         })
     }
    
