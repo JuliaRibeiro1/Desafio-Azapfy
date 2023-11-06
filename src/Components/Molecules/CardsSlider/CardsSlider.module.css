@@ -2,6 +2,7 @@
     text-align: center;
     flex-direction: row;
     font-size: 1.3rem;
+    margin-bottom: 1em;
 }
 .cardsSlider button {
     box-shadow: none;

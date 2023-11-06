@@ -7,43 +7,61 @@ export function UserProvider({children}) {
     const {data,error,loading} = useFetch()
     const [cardsArr, setCardsArr] = React.useState([])
     const [currentPageCards, setCurrentPageCards] = React.useState([])
+    const [heroBattleArr, setHeroBattleArr] = React.useState([])
     const [currentPage, setCurrentPage] = React.useState(1)
     const cardsInOnePage = 18
    
-    console.log(cardsArr)
+    
     React.useEffect(() => {
         
         if (data) {
           
-           setCurrentPageCards(cardsArr.slice(0, cardsInOnePage))
-      
-        console.log(currentPageCards)
+           setCardsArr(data)
+
         }
-      }, [data,cardsArr]);
+      }, [data]);
       
       function nextPage() {
         
         setCurrentPage(prev => prev + 1)
-        const startIndex = currentPage * cardsInOnePage;
-        const endIndex = startIndex + cardsInOnePage;
-     
-        setCurrentPageCards(cardsArr.slice(startIndex, endIndex))
-        
+   
       }
       function previousPage() {
         
         setCurrentPage(prev => prev - 1)
-        const startIndex = (currentPage - 2) * cardsInOnePage;
-        const endIndex = startIndex + cardsInOnePage;
-      
-        
-        setCurrentPageCards( cardsArr.slice(startIndex, endIndex))
-        console.log(currentPage)
-        console.log(endIndex)
-        console.log(currentPage)
+
       }
+
+      function heroBattle(hero) {
+        console.log("oII")
+        if(heroBattleArr.length < 2) {
+          setHeroBattleArr(prev => [...prev,hero])
+        }
+      }
+
+      React.useEffect(() => {
+        const startIndex = (currentPage - 1) * cardsInOnePage;
+        const endIndex = startIndex + cardsInOnePage;
+        setCurrentPageCards(cardsArr.slice(startIndex, endIndex));
+      }, [cardsArr, currentPage, cardsInOnePage]);
+    
+     
+    
     return (
-        <UserContext.Provider value={{cardsInOnePage, currentPage, setCurrentPage,data,error,loading,currentPageCards,nextPage,previousPage,setCardsArr, cardsArr}}>
+        <UserContext.Provider 
+        value={{
+          cardsInOnePage, 
+          currentPage, setCurrentPage,
+          data,
+          error,
+          loading,
+          currentPageCards,
+          nextPage,previousPage,
+          setCardsArr, cardsArr,
+          heroBattle,
+          heroBattleArr
+          }}>
+
             {children}
         </UserContext.Provider>
     )

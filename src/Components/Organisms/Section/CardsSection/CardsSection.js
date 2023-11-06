@@ -6,9 +6,9 @@ import {UserContext} from '../../../../useContext'
 
 function CardsSection() {
 
-    const {cardsArr,data,loading,error,currentPageCards,setCardsArr} = useContext(UserContext)
-    console.log(data)
-    console.log(currentPageCards)
+    const {cardsArr,data,loading,error,currentPageCards,setCardsArr} = React.useContext(UserContext)
+
+  
     if(loading) {
         return (
             <div>oii</div>
@@ -17,12 +17,14 @@ function CardsSection() {
     if(error) {
         return <div>Error: {error}</div>
     }
-    if(!data) {
-        setCardsArr(data)
+    if(!cardsArr) {
+       
         return null
     }
-    else {
+    if(cardsArr) {
+    
     return (
+      
     <div className={`${styles.cardsSection} `}>
        { currentPageCards.map(player => {
             return (<Card key={player.id} {...player}/>)

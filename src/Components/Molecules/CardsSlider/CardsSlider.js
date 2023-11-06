@@ -6,9 +6,11 @@ import { UserContext } from '../../../useContext'
 function CardsSlider() {
     const {currentPage,setCurrentPage,data,nextPage,previousPage, cardsArr} = React.useContext(UserContext)
     let totalPages = 0
-    if(data) {
+    if(cardsArr) {
         totalPages = Math.ceil(cardsArr.length / 18)
     }
+    
+    
 
 
   return (
