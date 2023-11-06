@@ -1,18 +1,27 @@
 import React from 'react'
-import InputName from '../../Atoms/Input/NameInput/InputName'
 import styles from "./SearchBar.module.css"
-import useForm from '../../../Hooks/useForm'
+
+import { UserContext } from '../../../useContext'
 
 function SearchBar() {
+
+  const [value, setValue] = React.useState("")
+  const {data,  setCardsArr,cardsArr} = React.useContext(UserContext)
+  function handleChange({target}) {
+    setValue(target.value)
   
-    const {value} = useForm()
-  
+   const filterArr = data.filter(e => e.name.includes(value))
+   
+   setCardsArr(filterArr)
+   console.log(cardsArr)
+    
+  }
     return (
         <div className={styles.searchBar}>
-            <InputName value={value}/>
+            <input value={value} placeholder='Digite o nome do herói' onChange={handleChange}/>
         </div>
     )
 
 }
 
-export default SearchBar
+export default SearchBar 

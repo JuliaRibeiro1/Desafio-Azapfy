@@ -10,15 +10,16 @@ export function UserProvider({children}) {
     const [currentPage, setCurrentPage] = React.useState(1)
     const cardsInOnePage = 18
    
-    
+    console.log(cardsArr)
     React.useEffect(() => {
+        
         if (data) {
-            setCardsArr(data)
+          
            setCurrentPageCards(cardsArr.slice(0, cardsInOnePage))
       
         console.log(currentPageCards)
         }
-      }, [data]);
+      }, [data,cardsArr]);
       
       function nextPage() {
         
@@ -42,7 +43,7 @@ export function UserProvider({children}) {
         console.log(currentPage)
       }
     return (
-        <UserContext.Provider value={{cardsInOnePage, currentPage, setCurrentPage,data,error,loading,currentPageCards,nextPage,previousPage}}>
+        <UserContext.Provider value={{cardsInOnePage, currentPage, setCurrentPage,data,error,loading,currentPageCards,nextPage,previousPage,setCardsArr, cardsArr}}>
             {children}
         </UserContext.Provider>
     )

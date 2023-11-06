@@ -6,7 +6,7 @@ import {UserContext} from '../../../../useContext'
 
 function CardsSection() {
 
-    const {cardsInOnePage,data,loading,error,currentPageCards} = useContext(UserContext)
+    const {cardsArr,data,loading,error,currentPageCards,setCardsArr} = useContext(UserContext)
     console.log(data)
     console.log(currentPageCards)
     if(loading) {
@@ -18,6 +18,7 @@ function CardsSection() {
         return <div>Error: {error}</div>
     }
     if(!data) {
+        setCardsArr(data)
         return null
     }
     else {
