@@ -1,0 +1,8 @@
+.battlePage {
+    background-image: url(../../../Assets/battle-page-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    
+}

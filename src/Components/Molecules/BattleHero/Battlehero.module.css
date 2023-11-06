@@ -1,0 +1,13 @@
+.battleHero img{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    border: 3px solid #AA8B24;
+}
+
+.battleHero h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}

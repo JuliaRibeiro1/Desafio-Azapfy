@@ -10,8 +10,7 @@ export function UserProvider({children}) {
     const [heroBattleArr, setHeroBattleArr] = React.useState([])
     const [currentPage, setCurrentPage] = React.useState(1)
     const cardsInOnePage = 18
-   
-    
+
     React.useEffect(() => {
         
         if (data) {
@@ -36,6 +35,9 @@ export function UserProvider({children}) {
         console.log("oII")
         if(heroBattleArr.length < 2) {
           setHeroBattleArr(prev => [...prev,hero])
+          if(heroBattleArr.length === 1) {
+            
+          }
         }
       }
 

@@ -1,0 +1,10 @@
+.battleHeros {
+    flex-direction: row;
+    gap: 2.5em;
+  
+}
+
+.battleHeros span {
+    font-family: "Dragon Hunter", sans-serif;
+    font-size: 10rem;
+}
