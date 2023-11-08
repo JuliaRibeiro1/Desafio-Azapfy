@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from "./HeroName.module.css"
 
 function HeroName({children}) {
   return (
-    <h3>{children}</h3>
+    <h2 className={styles.heroName}>{children}</h2>
   )
 }
 

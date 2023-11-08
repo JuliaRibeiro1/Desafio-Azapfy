@@ -8,9 +8,9 @@ function PowerStats() {
     console.log(heroBattleArr)
 
     return (
-        <div>
+        <div className={styles.powerStatsContainer}>
           {heroBattleArr.map((hero) => (
-            <div className={styles.powerStat}>
+            <div className={`${styles.powerStat} boxShadow `}>
               {Object.entries(hero.powerstats).map(([key, value]) => (
                 <Power key={key} powerName={key} powerValue={value} />
               ))}

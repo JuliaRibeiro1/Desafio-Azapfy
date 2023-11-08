@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from "./Battlehero.module.css"
+import HeroName from '../../Atoms/Text/HeroName/HeroName'
 
 function BattleHero({name,image}) {
   return (
     <div className={`${styles.battleHero} textShadow`}>
-        <h3>{name}</h3>
+        <HeroName>{name}</HeroName>
         <img src={image} className='boxShadow'/>
     </div>
   )

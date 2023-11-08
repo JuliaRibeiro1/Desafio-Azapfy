@@ -1,8 +1,27 @@
 
+.powerBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.powerBar {
+  display: flex;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+}
+
+.powerBar span {
+  font-size: 1.3rem;
+  justify-self: center;
   
-  
-  
-  
-  .barProgress {
-    background-color: #4AA91D;
-  }
+
+}
+
+.barProgress {
+  background-color: #4AA91D;
+}

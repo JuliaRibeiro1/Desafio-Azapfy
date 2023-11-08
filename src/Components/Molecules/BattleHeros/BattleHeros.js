@@ -7,9 +7,8 @@ function BattleHeros() {
     const {heroBattleArr} = React.useContext(UserContext)
     console.log(heroBattleArr)
   return (
-    <div className={`${styles.battleHeros} center`}>
+    <div className={styles.battleHeros}>
         <BattleHero name={heroBattleArr[0].name} image={heroBattleArr[0].images.md}/>
-      
         <span className='goldText'>Vs</span>
         <BattleHero name={heroBattleArr[1].name} image={heroBattleArr[1].images.md}/>
     </div>
