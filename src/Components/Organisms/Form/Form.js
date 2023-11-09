@@ -27,7 +27,7 @@ function Form() {
             onBlur={onBlur}
             error={error}
         />
-        <ButtonStartGame/>
+        <ButtonStartGame>Jogar</ButtonStartGame>
     </form>
   )
 }

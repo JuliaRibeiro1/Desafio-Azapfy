@@ -6,4 +6,11 @@
     background: -webkit-linear-gradient(#eeeeee,#AA8B24, #685413);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 1.5rem;
+    }
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./ButtonStartGame.module.css"
 
-function ButtonStartGame() {
+function ButtonStartGame({children, onClick}) {
   return (
-    <button className={`${styles.button} goldBorder`}>Jogar</button>
+    <button onClick={onClick} className={`${styles.button} goldBorder`}>{children}</button>
   )
 }
 

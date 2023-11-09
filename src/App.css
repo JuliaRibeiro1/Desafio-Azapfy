@@ -3,6 +3,7 @@
 body, button, input {
   font-family: 'Karma', serif;
   color: white;
+  overflow-x: hidden;
   
 }
 button, input {

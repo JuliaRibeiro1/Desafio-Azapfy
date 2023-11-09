@@ -3,6 +3,7 @@
     gap: 2.5em;
     width: 100%;
     display: flex;
+    margin-bottom: 1em;
     justify-content: space-evenly;
 
   
@@ -15,6 +16,6 @@
 
 .battleHeros span {
     margin-top: .5em;
-align-self: center;
+    align-self: center;
     
 }

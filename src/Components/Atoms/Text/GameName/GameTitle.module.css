@@ -3,6 +3,7 @@
     font-size: 4.5rem;
     position: relative;
     width: fit-content;
+    text-align: center;
 }
 
 .title:after {
@@ -15,4 +16,10 @@
     display: block;
     position: relative;
    
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
 }

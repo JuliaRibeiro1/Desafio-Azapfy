@@ -2,6 +2,7 @@
     background: none;
     padding: .5em;
     width: 25%;
+    min-width: 250px;
     font-weight: bold;
     margin-top: 1em;
     font-size: 1.2rem;

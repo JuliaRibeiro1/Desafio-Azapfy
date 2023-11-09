@@ -5,7 +5,9 @@ import BattleHero from '../BattleHero/BattleHero'
 
 function BattleHeros() {
     const {heroBattleArr} = React.useContext(UserContext)
-    console.log(heroBattleArr)
+    if(!heroBattleArr[0]) {
+      console.log("OIIAAA")
+    }
   return (
     <div className={styles.battleHeros}>
         <BattleHero name={heroBattleArr[0].name} image={heroBattleArr[0].images.md}/>

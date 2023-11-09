@@ -5,6 +5,7 @@ import StartPage from './Components/Pages/StartPage/StartPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { UserProvider } from './useContext';
 import BattlePage from './Components/Pages/BattlePage/BattlePage';
+import NotFound from './Components/Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact element={<StartPage/>} />
           <Route path="/game" exact element={<CardsPage/>} />
           <Route path="/battle" exact element={<BattlePage/>} />
+          <Route path="*" element={<NotFound/>}/>
        </Routes>
       </Router>
       </UserProvider>
