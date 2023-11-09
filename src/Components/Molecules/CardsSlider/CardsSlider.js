@@ -4,10 +4,10 @@ import styles from "./CardsSlider.module.css"
 import { UserContext } from '../../../useContext'
 
 function CardsSlider() {
-    const {currentPage,setCurrentPage,data,nextPage,previousPage, cardsArr} = React.useContext(UserContext)
+    const {currentPage,setCurrentPage,data,nextPage,previousPage, cardsArr, cardsInOnePage} = React.useContext(UserContext)
     let totalPages = 0
     if(cardsArr) {
-        totalPages = Math.ceil(cardsArr.length / 18)
+        totalPages = Math.ceil(cardsArr.length / cardsInOnePage)
     }
     
     

@@ -3,16 +3,22 @@ import useFetch from '../../../../Hooks/useFetch'
 import Card from "./../../../Molecules/Card/Card"
 import styles from "./CardsSection.module.css"
 import {UserContext} from '../../../../useContext'
+import SkeletonLoading from '../../../Molecules/SkeletonLoading/SkeletonLoading'
 
 function CardsSection() {
 
-    const {cardsArr,data,loading,error,currentPageCards,setCardsArr} = React.useContext(UserContext)
-
+    const {cardsArr,data,loading,error,currentPageCards,setCardsArr, setCardsInOnePage, cardsInOnePage} = React.useContext(UserContext)
+  
   
     if(loading) {
-        return (
-            <div>oii</div>
-        )
+        const elements = [];
+        for(let i = 0; i < 24; i++) {
+            console.log("OI")
+            elements.push(<SkeletonLoading><Card/></SkeletonLoading>)
+
+    }
+    return <div className={styles.cardsSection}>{elements}</div>;
+        
     }
     if(error) {
         return <div>Error: {error}</div>
@@ -25,7 +31,7 @@ function CardsSection() {
     
     return (
       
-    <div className={`${styles.cardsSection} `}>
+    <div className={styles.cardsSection}>
        { currentPageCards.map(player => {
             return (<Card key={player.id} {...player}/>)
         })

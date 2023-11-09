@@ -7,7 +7,7 @@ import styles from "./CardsPageHeader.module.css"
 
 function CardsPageHeader() {
   return (
-    <header className=''>
+    <header className={styles.cardsPageHeader}>
       <div className='headerRight'>
         <ButtonHeader>
             <img src={userIcon} alt='player'/>

@@ -6,13 +6,15 @@ import HeroRace from '../Text/HeroRace/HeroRace'
 
 function HeroNameAndrace({name,description}) {
   return (
-    <div className={`${styles.heroNameAndRace} textShadow`}>
+    <div className={`${styles.heroNameAndRaceContainer} textShadow`}>
+      <div className={styles.heroNameAndRace}>
         <HeroName>
             {name}
         </HeroName>
         <HeroRace>
             {description}
         </HeroRace>
+        </div>
     </div>
   )
 }

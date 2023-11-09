@@ -23,3 +23,11 @@
     
     }
 }
+
+@media (max-width: 500px) {
+    .card {
+        font-size: .8rem;
+        width: 130px;
+        height: 196px;
+    }
+}

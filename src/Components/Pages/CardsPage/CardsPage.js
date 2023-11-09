@@ -6,9 +6,11 @@ import CardsPageFooter from '../../Organisms/Footer/CardsPageFooter/CardsPageFoo
 
 function CardsPage() {
   return (
-    <div className={styles.cardsPage}>
+    <div className={styles.cardsPage} >
       <CardsPageHeader/>
-      <CardsSection/>
+      <div className='center'>
+        <CardsSection/>
+      </div>
       <CardsPageFooter/>
     </div>
   )

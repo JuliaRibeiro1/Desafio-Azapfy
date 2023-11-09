@@ -8,3 +8,9 @@
  
 }
 
+@media (max-width: 600px) {
+    .searchBar input {
+        width: 230px;
+        font-size: 1rem;
+    }
+}

@@ -9,7 +9,8 @@ export function UserProvider({children}) {
     const [currentPageCards, setCurrentPageCards] = React.useState([])
     const [heroBattleArr, setHeroBattleArr] = React.useState([])
     const [currentPage, setCurrentPage] = React.useState(1)
-    const cardsInOnePage = 18
+    const [cardsInOnePage,setCardsInOnePage] = React.useState(24)
+   
 
     React.useEffect(() => {
         
@@ -47,19 +48,41 @@ export function UserProvider({children}) {
         setCurrentPageCards(cardsArr.slice(startIndex, endIndex));
       }, [cardsArr, currentPage, cardsInOnePage]);
     
-     
+      
+      React.useEffect(() => {
+        const updateCardsInOnePage = () => {
+          if (window.innerWidth < 500) {
+            setCardsInOnePage(10);
+          } else {
+            setCardsInOnePage(24);
+          }
+        };
+    
+
+        window.addEventListener('resize', updateCardsInOnePage);
+    
+        updateCardsInOnePage();
+
+        return () => {
+          window.removeEventListener('resize', updateCardsInOnePage);
+        };
+      }, []); 
     
     return (
         <UserContext.Provider 
         value={{
           cardsInOnePage, 
-          currentPage, setCurrentPage,
+          setCardsInOnePage,
+          currentPage, 
+          setCurrentPage,
           data,
           error,
           loading,
           currentPageCards,
-          nextPage,previousPage,
-          setCardsArr, cardsArr,
+          nextPage,
+          previousPage,
+          setCardsArr, 
+          cardsArr,
           heroBattle,
           heroBattleArr
           }}>

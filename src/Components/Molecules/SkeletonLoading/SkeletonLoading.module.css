@@ -1,0 +1,19 @@
+.skeletonLoading > *{
+    background: linear-gradient(90deg, #f0f0f0bd 25%, #e0e0e0b2 50%,rgba(240, 240, 240, 0.774) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+   
+}
+
+.skeletonLoading .heroNameAndRaceContainer {
+
+}
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+

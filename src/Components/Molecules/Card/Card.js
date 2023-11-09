@@ -10,8 +10,8 @@ function Card(props) {
 
   return (
     <div className={`${styles.card} boxShadow`} onClick={() => heroBattle(props)}>
-      <img className={styles.heroImg} src={images.sm} alt='Hero'/>
-      <HeroNameAndRace name={name} description={appearance.race}/>
+     {images && <img className={styles.heroImg} src={images.sm} alt='Hero'/>}
+      {name && <HeroNameAndRace name={name} description={appearance ? appearance.race : ""}/>}
     </div>
   )
 }
