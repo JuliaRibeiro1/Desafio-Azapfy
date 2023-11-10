@@ -9,6 +9,10 @@ function useForm() {
             setError(`Preencha este campo`)
             return false;
         }
+        if(value.length > 15) {
+            setError(`Máximo 15 caracteres`)
+            return false;
+        }
         else {
             setError(null)
             return true;
@@ -16,7 +20,7 @@ function useForm() {
     }
 
     function onChange({ target }) {
-        if (error) validate(target.value)
+        validate(target.value)
         setValue(target.value);
     }
 

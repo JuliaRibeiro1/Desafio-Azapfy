@@ -9,12 +9,22 @@
     width: 80%;
     min-width: 350px;
 
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .cardsSection {
-        
+        width: 95%;
         grid-template-columns: repeat(auto-fill, 120px) ;
-        background-color: aqua;
+    
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .cardsSection {
+        width: 90%;
+        grid-template-columns: repeat(auto-fill, 140px) ;
+  
     }
 }

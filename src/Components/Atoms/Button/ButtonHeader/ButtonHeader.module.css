@@ -1,6 +1,9 @@
 .buttonHeader {
     background: linear-gradient(196deg, #152D3C 5.11%, rgba(21, 45, 60, 0.66) 12.08%, rgba(21, 45, 60, 0.00) 88.68%);
     padding: 1em;
+    width: 100%;
+    max-width: 60px;
+    height: 100%;
     border-radius: 50%;
 }
 

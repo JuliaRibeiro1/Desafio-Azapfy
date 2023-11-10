@@ -6,7 +6,7 @@ import { UserContext } from '../../../useContext'
 function SearchBar() {
 
   const [value, setValue] = React.useState("")
-  const {data,  setCardsArr,cardsArr} = React.useContext(UserContext)
+  const {data,  setCardsArr,cardsArr, setCurrentPage} = React.useContext(UserContext)
  
   function handleChange({target}) {
     setValue(target.value)
@@ -28,6 +28,7 @@ React.useEffect(() => {
     });
 
     const result = filterStartsWith.concat(filterIncludes);
+    setCurrentPage(1)
     setCardsArr(result);
   }
 }, [value]);

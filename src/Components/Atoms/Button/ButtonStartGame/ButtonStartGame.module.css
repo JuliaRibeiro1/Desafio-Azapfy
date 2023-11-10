@@ -1,8 +1,8 @@
 .button {
     background: none;
     padding: .5em;
-    width: 25%;
-    min-width: 250px;
+    width: 100%;
+    max-width: 300px;
     font-weight: bold;
     margin-top: 1em;
     font-size: 1.2rem;

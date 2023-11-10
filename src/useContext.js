@@ -10,6 +10,7 @@ export function UserProvider({children}) {
     const [heroBattleArr, setHeroBattleArr] = React.useState([])
     const [currentPage, setCurrentPage] = React.useState(1)
     const [cardsInOnePage,setCardsInOnePage] = React.useState(24)
+    const [userName, setUserName] = React.useState("")
    
 
     React.useEffect(() => {
@@ -68,6 +69,7 @@ export function UserProvider({children}) {
         };
       }, []); 
     
+      
     return (
         <UserContext.Provider 
         value={{
@@ -84,6 +86,8 @@ export function UserProvider({children}) {
           setCardsArr, 
           cardsArr,
           heroBattle,
+          setUserName,
+          userName,
           heroBattleArr
           }}>
 

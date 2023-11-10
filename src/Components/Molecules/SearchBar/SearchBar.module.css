@@ -10,7 +10,8 @@
 
 @media (max-width: 600px) {
     .searchBar input {
+        background-size: 20px;
         width: 230px;
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }

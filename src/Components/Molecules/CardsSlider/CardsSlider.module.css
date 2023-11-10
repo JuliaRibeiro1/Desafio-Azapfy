@@ -3,7 +3,9 @@
     flex-direction: row;
     font-size: 1.3rem;
     margin-bottom: 1em;
+    background-color: aquamarine;
 }
+
 .cardsSlider button {
     box-shadow: none;
 }
@@ -13,4 +15,12 @@
 
 .rightArrow {
     transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+    .cardsSlider img {
+        width: 50px;
+        
+    
+    }
 }

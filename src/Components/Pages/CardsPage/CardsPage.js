@@ -11,7 +11,10 @@ function CardsPage() {
       <div className='center'>
         <CardsSection/>
       </div>
-      <CardsPageFooter/>
+      <div className='center'>
+        <CardsPageFooter/>
+      </div>
+      
     </div>
   )
 }

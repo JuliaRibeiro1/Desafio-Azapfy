@@ -4,18 +4,20 @@ import ButtonStartGame from '../../Atoms/Button/ButtonStartGame/ButtonStartGame'
 import styles from "./Form.module.css"
 import useForm from '../../../Hooks/useForm'
 import { useNavigate } from "react-router-dom";
+import { UserContext } from '../../../useContext'
 
 
 function Form() {
   
   const {value,onChange,onBlur,error,validate} = useForm()
-  
+  const {setUserName} = React.useContext(UserContext)
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
     if(validate()) {
       navigate("/game")
+      setUserName(value)
     }
   }
 

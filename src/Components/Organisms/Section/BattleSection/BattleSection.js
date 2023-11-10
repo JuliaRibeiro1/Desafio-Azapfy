@@ -1,7 +1,7 @@
 import React from 'react'
 import BattleHeros from '../../../Molecules/BattleHeros/BattleHeros'
 import PowerStats from '../../../Molecules/PowerStats/PowerStats'
-import styles from "./Battle.module.css"
+import styles from "./BattleSection.module.css"
 
 function BattleSection() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./ButtonHeader.module.css"
 
-function ButtonHeader({children}) {
+function ButtonHeader({children, onClick}) {
   return (
-    <button className={styles.buttonHeader}>{children}</button>
+    <button onClick={onClick} className={styles.buttonHeader}>{children}</button>
   )
 }
 

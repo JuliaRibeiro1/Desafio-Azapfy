@@ -3,14 +3,17 @@
     display: flex;
     justify-content: flex-end;
     gap:2em;
-    padding: 1em 50px;
-    
+    padding: 1em 50px;;
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
     
 }
-
+.battlePreview div {
+    display: flex;
+   
+}
 .battlePreviewImg, .battlePreviewUnknown {
     background-size: cover;
     border-radius: 50%;
@@ -27,4 +30,11 @@
 .iconBattle {
     background-color: none;
     
+}
+
+@media (max-width: 600px) {
+    .battlePreview {
+       justify-content: center;
+    
+    }
 }

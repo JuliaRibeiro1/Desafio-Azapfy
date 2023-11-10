@@ -19,3 +19,10 @@
     align-self: center;
     
 }
+
+@media (max-width: 600px) {
+    .battleHeros span {
+       font-size: 4rem;
+    
+    }
+}

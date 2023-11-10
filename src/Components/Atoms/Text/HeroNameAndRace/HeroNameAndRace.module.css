@@ -13,3 +13,11 @@
  text-align: center;
    
 }
+
+
+@media (max-width: 600px) {
+    .heroNameAndRace {
+        margin-top: -20%;
+    }
+}
+

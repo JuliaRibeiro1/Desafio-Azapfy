@@ -19,9 +19,11 @@ function BattlePreview() {
     },[heroBattleArr])
   return (
     heroBattleArr.length > 0 && <div className={`${styles.battlePreview} boxShadow`}>
+      <div>
         <img src={heroBattleArr[0].images.sm} className={`${styles.battlePreviewImg} boxShadow`}/>
         <img src={iconBattle} className='iconBattle'/>
         {heroBattleArr[1] ? <img src={heroBattleArr[1].images.sm} className={styles.battlePreviewImg}/> : <div  className={`${styles.battlePreviewUnknown} center boxShadow`}> <img src={iconUnknown}/> </div>}
+        </div>
         
     </div> 
     

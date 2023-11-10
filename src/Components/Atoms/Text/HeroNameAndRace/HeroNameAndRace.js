@@ -1,7 +1,7 @@
 import React from 'react'
-import HeroName from '../Text/HeroName/HeroName'
+import HeroName from '../HeroName/HeroName'
 import styles from "./HeroNameAndRace.module.css"
-import HeroRace from '../Text/HeroRace/HeroRace'
+import HeroRace from '../HeroRace/HeroRace'
 
 
 function HeroNameAndrace({name,description}) {

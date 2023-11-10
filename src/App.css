@@ -42,19 +42,11 @@ button, input {
 header {
   display: flex;
   padding: 2em;
- 
+  align-items: center;
   justify-content: space-between;
 
-}.headerLeft {
-  display: flex;
-  gap:1.5em;
-  width: 30%;
-  justify-content: space-between;
- 
 }
-.headerLeft,.headerRight {
-  padding: 1em;
-}
+
 input {
   background-color: #2623513f;
   padding: .5em;
@@ -66,13 +58,33 @@ input {
 .space {
   margin: 10px;
 }
-@media (max-width: 600px) {
-  header {
-      
-      width: 100%;
-      
-  }
-  .headerLeft {
-    width: 80%;
-  }
+.buttonGold {
+  background: none;
+  padding: .5em;
+  width: 25%;
+  min-width: 250px;
+  font-weight: bold;
+  margin-top: 1em;
+  font-size: 1.2rem;
+  
 }
+
+.buttonGold:hover {
+  background: linear-gradient(50deg, rgba(255, 255, 255, 0.199), #ad8f22);
+  background-size: 150% 150%;
+  color: #533811;
+  animation: buttonAnimation 3s infinite;
+}
+
+@keyframes buttonAnimation {
+  0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+

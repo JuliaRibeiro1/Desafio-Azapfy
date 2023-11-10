@@ -1,0 +1,24 @@
+.user {
+max-width: 120px;
+
+   
+  
+}
+
+.user span {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: .5em;
+    
+   
+}
+
+.menu {
+
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(2, 10, 156, 0.308)
+}
