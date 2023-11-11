@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import ButtonStartGame from '../ButtonStartGame/ButtonStartGame';
+import ButtonGold from '../ButtonGold/ButtonGold';
 
 function ButtonStartPage({children}) {
     const navigate = useNavigate();
   return (
-    <ButtonStartGame onClick={() => navigate("/")}>{children}</ButtonStartGame>
+    <ButtonGold onClick={() => navigate("/")}>{children}</ButtonGold>
   )
 }
 

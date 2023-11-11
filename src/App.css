@@ -35,9 +35,7 @@ button, input {
   text-align: center;
 }
 
-.goldBorder {
-  border: 3px solid #AA8B24;
-}
+
 
 header {
   display: flex;

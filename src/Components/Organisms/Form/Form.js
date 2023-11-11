@@ -17,9 +17,13 @@ function Form() {
     e.preventDefault()
     if(validate()) {
       navigate("/game")
-      setUserName(value)
+     
     }
   }
+
+  React.useEffect(() => {
+   setUserName(value)
+  },[value])
 
   return (
     <form className={`${styles.form} center`} onSubmit={e => handleSubmit(e)}>

@@ -8,6 +8,7 @@ function Card(props) {
   const {name,appearance,images,powerstats} = props
   const {heroBattle} = React.useContext(UserContext)
 
+  
   return (
     <div className={`${styles.card} boxShadow`} onClick={() => heroBattle(props)}>
      {images && <img className={styles.heroImg} src={images.sm} alt='Hero'/>}

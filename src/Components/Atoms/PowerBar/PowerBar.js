@@ -2,7 +2,7 @@ import React from 'react'
 import { Line} from 'rc-progress';
 import styles from "./PowerBar.module.css"
 
-function PowerBar({powerName, powerValue, index, heroBattleArr,key}) {
+function PowerBar({powerName, powerValue, index, heroBattleArr}) {
   const [powerAnimation, setPowerAnimation] = React.useState(0)
   
   React.useEffect(() => {
@@ -14,7 +14,7 @@ function PowerBar({powerName, powerValue, index, heroBattleArr,key}) {
       } else {
         clearInterval(intervalId); // Limpa o intervalo quando powerAnimation atinge powerValue
       }
-    }, 10);
+    }, 50);
 
     return () => {
       clearInterval(intervalId); // Limpa o intervalo ao desmontar o componente

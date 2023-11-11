@@ -11,7 +11,8 @@ export function UserProvider({children}) {
     const [currentPage, setCurrentPage] = React.useState(1)
     const [cardsInOnePage,setCardsInOnePage] = React.useState(24)
     const [userName, setUserName] = React.useState("")
-   
+    const [totalPower, setTotalPower] = React.useState([])
+    const [winner, setWinner] = React.useState(null)
 
     React.useEffect(() => {
         
@@ -34,12 +35,18 @@ export function UserProvider({children}) {
       }
 
       function heroBattle(hero) {
-        console.log("oII")
-        if(heroBattleArr.length < 2) {
-          setHeroBattleArr(prev => [...prev,hero])
-          if(heroBattleArr.length === 1) {
+        console.log("oII");
+      
+        if (heroBattleArr.length < 2) {
+
+          const isHeroInBattleArr = heroBattleArr.filter((battleHero) => {
             
-          }
+            return battleHero.id === hero.id;
+          });
+      
+       
+            setHeroBattleArr((prev) => [...prev, hero]);
+          
         }
       }
 
@@ -86,9 +93,14 @@ export function UserProvider({children}) {
           setCardsArr, 
           cardsArr,
           heroBattle,
+          setHeroBattleArr,
           setUserName,
           userName,
-          heroBattleArr
+          heroBattleArr,
+          setWinner,
+          winner,
+          totalPower,
+          setTotalPower
           }}>
 
             {children}
