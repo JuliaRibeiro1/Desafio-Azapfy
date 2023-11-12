@@ -7,14 +7,13 @@ import ButtonStartPage from '../../Atoms/Button/ButtonStartPage/ButtonStartPage'
 
 function User() {
     const {userName} = React.useContext(UserContext)
-    const [isOpenMenu, setIsOpenMenu] = React.useState(false)
   return (
-    <div className={`${styles.user} center`} onClick={() => setIsOpenMenu(prev => !prev)}>
+    <div className={`${styles.user} center`}>
         <ButtonHeader>
             <img src={userIcon}/>
         </ButtonHeader>
         <span>{userName}</span>
-      {isOpenMenu && <ButtonStartPage>Sair</ButtonStartPage>}
+  
     </div>
   )
 }
