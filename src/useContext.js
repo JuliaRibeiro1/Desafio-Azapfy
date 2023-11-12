@@ -35,17 +35,18 @@ export function UserProvider({children}) {
       }
 
       function heroBattle(hero) {
-        console.log("oII");
       
         if (heroBattleArr.length < 2) {
 
-          const isHeroInBattleArr = heroBattleArr.filter((battleHero) => {
+          const isHeroInBattleArr = heroBattleArr.some((battleHero) => {
             
             return battleHero.id === hero.id;
           });
       
-       
+          if (!isHeroInBattleArr) {
             setHeroBattleArr((prev) => [...prev, hero]);
+          }
+           
           
         }
       }

@@ -3,8 +3,19 @@ import styles from "./CardsPage.module.css"
 import CardsSection from '../../Organisms/Section/CardsSection/CardsSection'
 import CardsPageHeader from '../../Organisms/Header/CardsPageHeader/CardsPageHeader'
 import CardsPageFooter from '../../Organisms/Footer/CardsPageFooter/CardsPageFooter'
+import { UserContext } from '../../../useContext'
+import { useNavigate } from 'react-router-dom'
 
 function CardsPage() {
+  const {userName} = React.useContext(UserContext)
+  const navigate = useNavigate()
+
+  React.useEffect(() => {
+    if (userName === "") {
+        navigate("*");
+    }
+}, [userName, navigate]);
+
   return (
     <div className={styles.cardsPage} >
       <CardsPageHeader/>
@@ -14,7 +25,6 @@ function CardsPage() {
       <div className='center'>
         <CardsPageFooter/>
       </div>
-      
     </div>
   )
 }

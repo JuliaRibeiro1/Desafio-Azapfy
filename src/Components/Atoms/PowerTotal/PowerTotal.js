@@ -1,41 +1,38 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../useContext';
+import styles from "./PowerTotal.module.css";
 
-function PowerTotal() {
-  const { setTotalPower, totalPower, heroBattleArr, setWinner, winner} = useContext(UserContext);
-  const [animatedTotals, setAnimatedTotals] = useState([0, 0]);
+function PowerTotal({ index }) {
+  const { heroBattleArr, setWinner, winner } = useContext(UserContext);
+  const [powerCount, setPowerCount] = React.useState(0);
+  const [maxTotal, setMaxTotal] = useState(0);
 
   useEffect(() => {
-    const totals = heroBattleArr.map((hero) =>
-      Object.values(hero.powerstats).reduce((acc, curr) => acc + curr, 0)
-    );
-console.log(winner)
-    const indexOfMaxTotal = totals.indexOf(Math.max(...totals));
-    setWinner(heroBattleArr[indexOfMaxTotal]);
-    console.log(heroBattleArr[indexOfMaxTotal])
-    let currentTotals = [0, 0];
-    const intervalId = setInterval(() => {
-      setAnimatedTotals((prev) => {
-        const updatedTotals = [...prev];
-        if (currentTotals[0] < totals[0]) {
-          currentTotals[0] += 1;
-          updatedTotals[0] = currentTotals[0];
-          setTotalPower((prevTotal) => [...prevTotal, currentTotals[0]]);
+    if (heroBattleArr[index]) {
+      const total = Object.values(heroBattleArr[index].powerstats).reduce((acc, curr) => acc + curr, 0);
+  
+      if (total >= maxTotal) {
+        setMaxTotal(total);
+        setWinner(heroBattleArr[index]);
+      }
+  
+      const intervalId = setInterval(() => {
+        if (powerCount < total) {
+          setPowerCount(prev => Math.min(prev + 1));
+        } else {
+          clearInterval(intervalId);
         }
-        if (currentTotals[1] < totals[1]) {
-          currentTotals[1] += 1;
-          updatedTotals[1] = currentTotals[1];
-          setTotalPower((prevTotal) => [...prevTotal, currentTotals[1]]);
-        }
-        return updatedTotals;
-      });
-    }, 5); 
+      }, 1);
+  
+      return () => clearInterval(intervalId);
+    }
+  }, [heroBattleArr, index, maxTotal, powerCount]);
 
-   
-    return () => clearInterval(intervalId);
-  }, [heroBattleArr, setTotalPower]);
-
-  return <div>{`${animatedTotals[0]} | ${animatedTotals[1]}`}</div>;
+  return (
+    <div className={styles.powersTotals}>
+      <div>{powerCount}</div>
+    </div>
+  );
 }
 
 export default PowerTotal;

@@ -1,8 +1,10 @@
 import React from 'react'
 import { Line} from 'rc-progress';
 import styles from "./PowerBar.module.css"
+import { UserContext } from '../../../useContext';
 
 function PowerBar({powerName, powerValue, index, heroBattleArr}) {
+  const {setWinner} = React.useContext(UserContext)
   const [powerAnimation, setPowerAnimation] = React.useState(0)
   
   React.useEffect(() => {
@@ -12,14 +14,17 @@ function PowerBar({powerName, powerValue, index, heroBattleArr}) {
         setPowerAnimation(prev => Math.min(prev + 1, powerValue));
         
       } else {
-        clearInterval(intervalId); // Limpa o intervalo quando powerAnimation atinge powerValue
+        setWinner(powerAnimation)
+        clearInterval(intervalId); 
       }
-    }, 50);
-
+    }, 45);
+    
     return () => {
-      clearInterval(intervalId); // Limpa o intervalo ao desmontar o componente
+      clearInterval(intervalId);
     };
   }, [powerValue]);
+
+
 
   function comparePower() {
     let nextIndex = index ===  0 ? 1 : 0
@@ -30,6 +35,7 @@ function PowerBar({powerName, powerValue, index, heroBattleArr}) {
       return false
     }
   }
+
   const strokeColor = comparePower() ? "#4AA91D" : "#ff0000"
   return (
     <div className={styles.powerBarContainer}>

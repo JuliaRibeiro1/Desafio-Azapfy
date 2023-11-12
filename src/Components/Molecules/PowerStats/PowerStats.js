@@ -15,6 +15,7 @@ function PowerStats() {
                
               {Object.entries(hero.powerstats).map(([keyObj, value]) => (
                 <PowerBar key={`${index}-${keyObj}`} powerName={keyObj} powerValue={value} index={index} heroBattleArr={heroBattleArr}/>
+                
               ))}
             </div>
         

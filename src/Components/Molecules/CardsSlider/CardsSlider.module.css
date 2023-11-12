@@ -2,8 +2,7 @@
     text-align: center;
     flex-direction: row;
     font-size: 1.3rem;
-    margin-bottom: 1em;
-    background-color: aquamarine;
+    margin-bottom: 5em;
 }
 
 .cardsSlider button {
@@ -20,7 +19,7 @@
 @media (max-width: 600px) {
     .cardsSlider img {
         width: 50px;
-        
     
     }
+   
 }

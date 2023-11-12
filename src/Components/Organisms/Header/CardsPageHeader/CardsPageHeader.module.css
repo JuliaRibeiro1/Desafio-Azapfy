@@ -1,0 +1,15 @@
+.cardsPageHeader {
+    display: flex;
+    padding: 2em;
+    align-items: center;
+    gap:1em;
+    justify-content: space-between;
+  
+}
+
+
+@media (max-width: 600px) {
+    .cardsPageHeader {
+        padding: 1em;
+    }
+    }

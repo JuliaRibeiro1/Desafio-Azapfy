@@ -1,0 +1,13 @@
+.powersTotals {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2rem;
+    
+}
+
+
+@media (max-width: 600px) {
+    .powersTotals {
+        font-size: 1.3rem;
+    }
+}

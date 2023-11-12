@@ -35,16 +35,6 @@ button, input {
   text-align: center;
 }
 
-
-
-header {
-  display: flex;
-  padding: 2em;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
 input {
   background-color: #2623513f;
   padding: .5em;
@@ -53,9 +43,11 @@ input {
   box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.295) inset;
   border:  3px solid #AA8B24;;
 }
+
 .space {
   margin: 10px;
 }
+
 .buttonGold {
   background: none;
   padding: .5em;
@@ -72,6 +64,10 @@ input {
   background-size: 150% 150%;
   color: #533811;
   animation: buttonAnimation 3s infinite;
+}
+
+input:focus {
+  outline: 0;
 }
 
 @keyframes buttonAnimation {
