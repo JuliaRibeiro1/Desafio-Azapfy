@@ -10,9 +10,13 @@ export function UserProvider({children}) {
     const [heroBattleArr, setHeroBattleArr] = React.useState([])
     const [currentPage, setCurrentPage] = React.useState(1)
     const [cardsInOnePage,setCardsInOnePage] = React.useState(24)
-    const [userName, setUserName] = React.useState("")
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const [totalPower, setTotalPower] = React.useState([])
     const [winner, setWinner] = React.useState(null)
+
+    React.useEffect(() => {
+      localStorage.setItem('userName', userName);
+    }, [userName]);
 
     React.useEffect(() => {
         

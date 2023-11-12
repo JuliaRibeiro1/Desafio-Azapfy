@@ -13,7 +13,7 @@ function BattlePage() {
       
       const timeoutId = setTimeout(() => {
         setShowWinnerModal(true);
-      }, 8000);
+      }, 6000);
 
       return () => clearTimeout(timeoutId);
     }

@@ -9,7 +9,6 @@ function ButtonStartGame({children}) {
 
   function startGame() {
     if(userName) {
-      console.log("OIII")
       navigate("/game")
       setHeroBattleArr([])
     }
