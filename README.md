@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Desafio Azapfy - Jornada do Herói 🦸‍♀️💪
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição 
 
-## Available Scripts
+Bem-vindo ao SuperHero Clase, um jogo onde vários heróis podem se enfrentar em duelos épicos.
 
-In the project directory, you can run:
+## Demonstração
+https://github.com/JuliaRibeiro1/Desafio-Azapfy/assets/96126190/54b4212c-4538-4031-9a34-42e255aaa013
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [React](https://reactjs.org/): Uma biblioteca JavaScript para construir interfaces de usuário.
+- [React Router](https://reactrouter.com/): Roteamento para aplicativos React.
+- [Atomic design](https://atomicdesign.bradfrost.com/): Metodologia de design.
+- [Skeleton Loading](https://www.nngroup.com/articles/skeleton-screens/): Melhora a percepção do tempo de carregamento para o usuário.
+- [Rc-progress](https://www.npmjs.com/package/rc-progress?activeTab=readme): Biblioteca para barra de carregamento.
+- [CSS Modules](https://www.w3schools.com/react/react_es6_modules.asp): Escopo local para css, evitando conflitos de estilos.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estrutura do Projeto
 
-### `npm run build`
+A divisão dos componentes segue a metodologia Atomic Design, proporcionando uma estrutura organizada e escalável para os componentes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Cards de Heróis:
+    Cada herói, obtido através da API, é representado por um card contendo sua imagem, nome e raça correspondente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pesquisa:
+    Implementa um campo de pesquisa que filtra os heróis pelo nome. A pesquisa inicialmente filtra os heróis cujo nome começa com a(s) letra(s) inserida(s).
+### Sistema de Combate:
+    Permite que o usuário selecione dois heróis para um combate simulado. O herói com o maior somatório de poderes é declarado vencedor.
+### Navegação entre os heróis
+    O usário pode navegar entre os heróis ao invés de renderizar todos na mesma página.
+### Página not found 
+    Uma página personalizada para o aplicativo, caso o usuário tente acessar uma página que não exista.
+### Local storage
+    Armazena o nome do usário, caso a página seja recarregada por acidente.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
