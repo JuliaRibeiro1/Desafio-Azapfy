@@ -10,7 +10,7 @@ O link para fazer a solicitação dos dados fornecido é bloqueado pelo navegado
 ## Links
 
 ### Vercel
-🔗 https://desafio-azapfy.vercel.app/game
+🔗 https://desafio-azapfy.vercel.app
 ### Figma
 🔗 https://www.figma.com/file/vsxBsXgkceczFdDYmHWhp8/Jornada-de-her%C3%B3is?type=design&node-id=0-1&mode=design&t=KyeG8n5rUMjWYFOx-0 
 ## Demonstração
