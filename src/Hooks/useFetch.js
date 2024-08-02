@@ -8,7 +8,7 @@ const useFetch = () => {
     try {
       setError(null);
       setLoading(true);
-      const response = await fetch("http://homologacao3.azapfy.com.br/api/ps/metahumans");
+      const response = await fetch("https://akabab.github.io/superhero-api/api/all.json");
       const json = await response.json();
 
       if (response.ok === false) {
