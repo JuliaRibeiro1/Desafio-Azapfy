@@ -8,26 +8,25 @@ import { useNavigate } from 'react-router-dom'
 function BattlePreview() {
     const {heroBattleArr} = React.useContext(UserContext)
     const navigate = useNavigate();
-    console.log(heroBattleArr)
     React.useEffect(() => {
-    if(heroBattleArr.length > 1) {
+    if(heroBattleArr && heroBattleArr.length > 1) {
         setTimeout(() => {
             navigate("/battle")
         },1000)
        
     }
     },[heroBattleArr])
+
   return (
-    heroBattleArr.length > 0 && <div className={`${styles.battlePreview} boxShadow`}>
+    heroBattleArr && heroBattleArr.length > 0 ?  <div className={`${styles.battlePreview} boxShadow`}>
       <div>
-        <img src={heroBattleArr[0].images.sm} className={`${styles.battlePreviewImg} boxShadow`}/>
-        <img src={iconBattle} className='iconBattle'/>
+        <img src={heroBattleArr[0].images.sm} alt="hero 1" className={`${styles.battlePreviewImg} boxShadow`}/>
+        <img src={iconBattle} alt="hero 2" className='iconBattle'/>
         {heroBattleArr[1] ? <img src={heroBattleArr[1].images.sm} className={styles.battlePreviewImg}/> : <div  className={`${styles.battlePreviewUnknown} center boxShadow`}> <img src={iconUnknown}/> </div>}
         </div>
         
     </div> 
-    
-  )
+    : "")
 }
 
 export default BattlePreview

@@ -9,7 +9,7 @@ function PowerStats() {
     return (
         <div className={styles.powerStatsContainer}>
           
-          {heroBattleArr.map((hero, index) => (
+          {heroBattleArr ? heroBattleArr.map((hero, index) => (
           
             <div className={`${styles.powerStat} boxShadow `}>
                
@@ -19,7 +19,7 @@ function PowerStats() {
               ))}
             </div>
         
-          ))}
+          )) : ""} 
        
         </div>
         

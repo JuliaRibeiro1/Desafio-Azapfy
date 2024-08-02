@@ -40,7 +40,7 @@ export function UserProvider({children}) {
 
       function heroBattle(hero) {
       
-        if (heroBattleArr.length < 2) {
+        if (heroBattleArr && heroBattleArr.length < 2) {
 
           const isHeroInBattleArr = heroBattleArr.some((battleHero) => {
             

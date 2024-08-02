@@ -13,7 +13,6 @@ function CardsSection() {
     if(loading) {
         const elements = [];
         for(let i = 0; i < 24; i++) {
-            console.log("OI")
             elements.push(<SkeletonLoading><Card/></SkeletonLoading>)
 
     }

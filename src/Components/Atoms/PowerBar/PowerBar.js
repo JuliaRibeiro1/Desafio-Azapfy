@@ -28,7 +28,7 @@ function PowerBar({powerName, powerValue, index, heroBattleArr}) {
 
   function comparePower() {
     let nextIndex = index ===  0 ? 1 : 0
-    if(heroBattleArr[index].powerstats[powerName] > heroBattleArr[nextIndex].powerstats[powerName]) {
+    if(heroBattleArr.length > 1 && heroBattleArr[index].powerstats[powerName] > heroBattleArr[nextIndex].powerstats[powerName]) {
         return true
     }
     else {
