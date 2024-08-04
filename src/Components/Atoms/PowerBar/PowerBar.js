@@ -42,7 +42,7 @@ function PowerBar({powerName, powerValue, index, heroBattleArr}) {
         <h4>{powerName}</h4>
         <div className={styles.powerBar}>
       
-        <Line percent={powerAnimation} trailColor=" #d9d9d957" strokeColor={strokeColor} strokeWidth={2} trailWidth={2} />
+        <Line  trailColor=" #d9d9d957" strokeColor={strokeColor} strokeWidth={2} trailWidth={2} />
    
         <span>{powerValue}</span>
         </div>
