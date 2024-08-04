@@ -22,4 +22,10 @@
 
 }
 
+@media (max-width: 600px) {
+  .powerBar span {
+    font-size: 1rem;
+  }
+}
+
 
