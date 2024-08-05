@@ -10,20 +10,7 @@ function CardsPage() {
 
   const { userName, setHeroBattleArr } = React.useContext(UserContext);
   const navigate = useNavigate();
-  useEffect(() => {
 
-    const handlePopstate = (event) => {
-     setHeroBattleArr([])
-
-    };
-
-    window.addEventListener("popstate", handlePopstate);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopstate);
-     
-    }
-  }, []);
 
 
   useEffect(() => {

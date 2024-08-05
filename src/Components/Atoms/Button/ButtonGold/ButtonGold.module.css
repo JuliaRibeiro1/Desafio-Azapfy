@@ -19,6 +19,12 @@
     animation: buttonAnimation 3s infinite;
 }
 
+@media (max-width: 600px) {
+  .buttonGold{
+      max-width: 120px;
+  }
+}
+
 @keyframes buttonAnimation {
     0% {
         background-position: 0% 50%;

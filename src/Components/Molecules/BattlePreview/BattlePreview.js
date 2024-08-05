@@ -6,17 +6,26 @@ import { UserContext } from '../../../useContext'
 import { useNavigate } from 'react-router-dom'
 
 function BattlePreview() {
+  const { setHeroBattleArr } = React.useContext(UserContext);
     const {heroBattleArr} = React.useContext(UserContext)
-    const navigate = useNavigate();
-    React.useEffect(() => {
-    if(heroBattleArr && heroBattleArr.length > 1) {
-        setTimeout(() => {
-            navigate("/battle")
-        },1000)
-       
-    }
-    },[heroBattleArr])
 
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      let timeoutId;
+  
+      if (heroBattleArr && heroBattleArr.length > 1) {
+        timeoutId = setTimeout(() => {
+          navigate("/battle");
+        }, 1000);
+      }
+  
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }, [heroBattleArr, navigate]);
+  
+   
   return (
     heroBattleArr && heroBattleArr.length > 0 ?  <div className={`${styles.battlePreview} boxShadow`}>
       <div>

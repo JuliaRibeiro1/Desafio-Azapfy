@@ -22,7 +22,7 @@ function PowerTotal({ index }) {
         } else {
           clearInterval(intervalId);
         }
-      }, 1);
+      }, 1.5);
   
       return () => clearInterval(intervalId);
     }

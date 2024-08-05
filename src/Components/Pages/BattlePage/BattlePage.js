@@ -5,9 +5,25 @@ import { UserContext } from '../../../useContext';
 import WinnerModal from '../../Organisms/WinnerModal/WinnerModal';
 
 function BattlePage() {
-  const { winner } = React.useContext(UserContext);
+  const { winner,setHeroBattleArr } = React.useContext(UserContext);
   const [showWinnerModal, setShowWinnerModal] = useState(false);
 
+
+  useEffect(() => {
+    const handlePopstate = (event) => {
+    
+      setHeroBattleArr([])
+
+    };
+
+    window.addEventListener("popstate", handlePopstate);
+
+    return () => {
+ 
+    }
+  }, []);
+  
+  
   useEffect(() => {
     if (winner) {
       
